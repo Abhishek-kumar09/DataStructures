@@ -5,7 +5,7 @@ fork The Repository<br>
   clone the repo<br>
   make the changes on your local machine<br>
   make the pull request
-
+  star the repo
 
 # Maintainers
 <em>Abhishek Kumar</em><br>

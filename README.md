@@ -4,7 +4,7 @@ This is a Data Structure And Algorithm Repo consisting codes written in Java.
 fork The Repository<br>
   clone the repo<br>
   make the changes on your local machine<br>
-  make the pull request
+  make the pull request<br>
   star the repo
 
 # Maintainers

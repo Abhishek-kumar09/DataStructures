@@ -1,6 +1,6 @@
 # DataStructures
 This is a Data Structure And Algorithm Repo consisting codes written in Java.
-#Getting Started With it
+# Getting Started With it
 <p>fork The Repository<br>
   clone the repo<br>
   make the changes on your local machine<br>

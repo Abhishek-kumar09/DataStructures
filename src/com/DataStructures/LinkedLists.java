@@ -1,8 +1,7 @@
 package com.DataStructures;
+ class LinkedLists {
 
-public class LinkedLists {
-
-    class Node {
+    static class Node {
         int data;
         Node next;
         Node(int d) {

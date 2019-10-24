@@ -1,5 +1,6 @@
 package com.DataStructures;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -21,7 +22,7 @@ public class Main {
                     System.out.println("3.Delete At Beginning");
                     System.out.println("4.Delete At Ending");
                     System.out.println("5.Show List");
-
+                    System.out.println("6. Exit");
                     innerchoice=sc.nextInt();
                     switch(innerchoice) {
                         case 1:

@@ -112,10 +112,8 @@ public class Main {
                     Queue q = new Queue();
                     System.out.println("1.Insertion In BinaryTree");
                     System.out.println("2.Deletion In Binary Tree");
-                    System.out.println("3.Show Binary Tree in LevelOrder");
-                    System.out.println("4.Show Binary Tree in postOrder");
-
-                    System.out.println("5.Show Number of Data in Tree");
+                    System.out.println("3.Show Binary Tree ");
+                    System.out.println("4.Exit");
                     innerchoice = sc.nextInt();
                     switch (innerchoice) {
                         case 1:
@@ -128,15 +126,18 @@ public class Main {
                             H.pushEnd(x);
                             break;
                         case 3:
-                            B.ShowTree();
-                            break;
-                        case 4:
-                            B.printPostorder(B.root);
+                            System.out.println("1.Show In-Order Traversal");
+                            System.out.println("2.Show Pre-Order Traversal");
+                            System.out.println("3.Show Post-Order Traversal");
+                            x = sc.nextInt();
+                            switch (x) {
+                                case 1 : B.printInOrder(B.root);break;
+                                case 2 : B.printPreOrder(B.root);break;
+                                case 3 : B.printPostorder(B.root);break;
+                            }
                             break;
                     }
-                    System.out.println("Do You Want to Continue");
-                    ch = sc.next().charAt(0);
-                } while (ch != 'N' || ch != 'n');
+                } while (innerchoice < 4);
                 break;
         }
 

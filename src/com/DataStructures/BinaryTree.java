@@ -27,7 +27,7 @@ public class BinaryTree {
         } else {
 
             {
-                Queue<Node> queue = new LinkedList<Node>();
+                LinkedList<Node> queue = new LinkedList<Node>();
                 queue.add(root);
                 while (!queue.isEmpty()) {
 
@@ -48,15 +48,11 @@ public class BinaryTree {
                         break;
                     }
                 }
-
-
             }
-
-
         }
     }
 
-    void ShowTree() {
+    void printLevelTraversal() {
 
         Queue<Node> queue = new LinkedList<Node>();
         queue.add(root);
@@ -70,8 +66,6 @@ public class BinaryTree {
                 queue.add(tempNode.right);
             }
         }
-
-
     }
 
     void printPostorder(Node node) {
@@ -82,6 +76,18 @@ public class BinaryTree {
         System.out.print(node.data + " ");
     }
 
+    void printPreOrder(Node root) {
+        if(root == null) return;
+        System.out.print(root.data + " ");
+        printPreOrder(root.left);
+        printPreOrder(root.right);
+    }
+    void printInOrder(Node root) {
+        if(root == null) return;
+        printInOrder(root.left);
+        System.out.print(root.data + " ");
+        printInOrder(root.right);
+    }
 
 }
 

@@ -7,7 +7,7 @@ public class LinkedLists {
         int data;
         Node next;
         Node(int d) {
-            this.data =d; this.next =null;
+            data =d; next =null;
         }
     }
     void pushBegin(int key) {
@@ -23,13 +23,14 @@ public class LinkedLists {
     }
     void pushEnd(int key) {
         Node n = new Node(key);
-        if(tail != null) {
-            tail.next = n;
-            tail =n;
-        }
-        else {
+        if(tail == null) {
             head = n;
             tail = n;
+
+        }
+        else {
+            tail.next = n;
+            tail =n;
         }
     }
     Node popBegin() {
@@ -61,7 +62,26 @@ public class LinkedLists {
         Node temp = head;
         while(temp != null) {
             System.out.print(temp.data + ">");
+            temp=temp.next;
         }
+    }
+    int NumberOfNodes()
+    {
+        Node tmpry=head;
+        int count=1;
+        if(head==null)
+        {
+            System.out.println("List is Empty");
+        }
+        else {
+            while(tmpry.next!=null)
+            {
+                tmpry=tmpry.next;
+                count++;
+            }
+            System.out.println(count);
+        }
+        return count;
     }
 
 

@@ -1,24 +1,29 @@
 package com.DataStructures;
 
 public class LinkedLists {
-    Node head;
-    Node tail;
+
     class Node {
         int data;
         Node next;
         Node(int d) {
-            this.data =d; this.next =null;
+            data = d;
+            next = null;
         }
     }
+    Node head;
+    Node tail;
     void pushBegin(int key) {
         Node n = new Node(key);
         if(head != null) {
-            n.next =head;
-            head = n;
+            n.next = this.head;
+            this.head = n;
+            System.out.println("inserting");
+            System.out.println(head.data);
         }
         else {
-            head =n;
-            tail =n;
+            this.head = n;
+            this.tail = n;
+            System.out.println("inserting first");
         }
     }
     void pushEnd(int key) {
@@ -60,7 +65,8 @@ public class LinkedLists {
         System.out.println("The List is : ");
         Node temp = head;
         while(temp != null) {
-            System.out.print(temp.data + ">");
+            System.out.printf("%d>", temp.data);
+            temp = temp.next;
         }
     }
 

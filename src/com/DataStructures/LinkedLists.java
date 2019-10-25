@@ -1,4 +1,4 @@
-package com.DataStructures;
+
  class LinkedLists {
 
     static class Node {

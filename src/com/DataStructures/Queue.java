@@ -1,4 +1,4 @@
-package com.DataStructures;
+
 
 public class Queue {
     LinkedLists ls = new LinkedLists();

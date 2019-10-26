@@ -1,5 +1,5 @@
 
- class LinkedLists {
+class LinkedLists {
 
     static class Node {
         int data;
@@ -48,12 +48,13 @@
     }
     Node popEnd() {
         if(tail != null) {
-            Node temp = tail;
+            Node temp = head;
             while(temp.next.next != null) {
                 temp = temp.next;
             }
-            tail = temp;
-            return temp.next;
+            tail=temp;
+            temp.next=null;
+            return temp;
         }
         else {
             System.out.println("UnderFlow, Put Some Data First");
@@ -67,6 +68,7 @@
             System.out.printf("%d>", temp.data);
             temp = temp.next;
         }
+        System.out.println("\n");
     }
 
 
